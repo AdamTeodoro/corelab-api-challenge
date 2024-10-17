@@ -18,16 +18,16 @@ export const listMyVehiclesController = async (req: Request, res: Response) => {
 			}
 		});
 		res.status(200)
-		.json({
-			code: 'success-to-get-vehicles',
-			myVehicles
-		})
-		.end();
+			.json({
+				code: 'success-to-get-vehicles',
+				myVehicles
+			})
+			.end();
 		return;
 	} catch {
 		res.status(500)
-		.json({ code: 'unknow-error' })
-		.end();
+			.json({ code: 'unknow-error' })
+			.end();
 		return;
 	}
 }

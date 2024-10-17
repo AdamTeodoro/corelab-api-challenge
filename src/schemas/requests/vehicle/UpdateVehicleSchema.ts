@@ -9,9 +9,9 @@ export const UpdateVehicleSchema = Joi.object({
 	
 	query: Joi.object({
 		idVehicle: Joi.number().integer()
-		.min(1)
-		.max(99999999999)
-		.required()
+			.min(1)
+			.max(99999999999)
+			.required()
 	}).required(),
 
 	body: Joi.object({

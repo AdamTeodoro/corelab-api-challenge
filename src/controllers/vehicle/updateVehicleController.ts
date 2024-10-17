@@ -26,19 +26,19 @@ export const updateVehicleController = async (req: Request, res: Response) => {
 		});
 		if (!refVehicle) {
 			res.status(400)
-			.json({ code: 'invalid-request-vehicle' })
-			.end();
+				.json({ code: 'invalid-request-vehicle' })
+				.end();
 			return;
 		}
 		await refVehicle.update(vehicle);
 		res.status(200)
-		.json({ code: 'success-to-update' })
-		.end();
+			.json({ code: 'success-to-update' })
+			.end();
 		return;
 	} catch {
 		res.status(500)
-		.json({ code: 'unknow-error' })
-		.end();
+			.json({ code: 'unknow-error' })
+			.end();
 		return;
 	}
 }

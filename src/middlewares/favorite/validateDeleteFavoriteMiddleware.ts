@@ -7,19 +7,19 @@ export const validateDeleteFavoriteMiddleware = (req: Request, res: Response, ne
 		const { error } = DeleteFavoriteSchema.validate(req);
 		if (error) {
 			res.status(400)
-			.json({
-				code: 'invalid-request-data',
-				error: error.details
-			})
-			.end();
+				.json({
+					code: 'invalid-request-data',
+					error: error.details
+				})
+				.end();
 			return;
 		}
 		next();
 		return;
 	} catch {
 		res.status(500)
-		.json({ code: 'unknow-error '})
-		.end();
+			.json({ code: 'unknow-error '})
+			.end();
 		return;
 	}
 }

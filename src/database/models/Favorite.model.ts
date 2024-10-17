@@ -39,5 +39,4 @@ export type FavoriteData = {
 	idSession: number;
 	idVehicle: number;
 }
-
 export const favoriteModel = build(db);

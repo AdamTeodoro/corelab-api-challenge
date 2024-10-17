@@ -11,19 +11,19 @@ export const createSessionController = async (req: Request, res: Response) => {
 		const newSession = await sessionModel.create({ token });
 		const authorization = jwt.sign({ id: newSession.id }, token);
 		res.status(200)
-		.json({
-			code: 'success-to-get-session',
-			session: {
-				id: newSession.id,
-				authorization,
-			}
-		})
-		.end();
+			.json({
+				code: 'success-to-get-session',
+				session: {
+					id: newSession.id,
+					authorization,
+				}
+			})
+			.end();
 		return;
 	} catch {
 		res.status(500)
-		.json({ code: 'unknow-error' })
-		.end();
+			.json({ code: 'unknow-error' })
+			.end();
 		return;
 	}
 }

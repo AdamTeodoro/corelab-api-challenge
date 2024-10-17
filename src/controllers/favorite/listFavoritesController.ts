@@ -18,16 +18,16 @@ export const listFavoritesController = async (req: Request, res: Response) => {
 			}
 		});
 		res.status(200)
-		.json({
-			code: 'success-to-list-favorites', 
-			favoriteList
-		})
-		.end();
+			.json({
+				code: 'success-to-list-favorites', 
+				favoriteList
+			})
+			.end();
 		return;
 	} catch {
 		res.status(500)
-		.json({ code: 'unknow-error' })
-		.end();
+			.json({ code: 'unknow-error' })
+			.end();
 		return;
 	}
 }

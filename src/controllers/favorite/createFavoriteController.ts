@@ -15,8 +15,8 @@ export const createFavoriteController = async (req: Request, res: Response) => {
 		const refVehicle = await vehicleModel.findByPk(req.body.idVehicle)
 		if (!refVehicle) {
 			res.status(400)
-			.json({ code: 'invalid-request-vehicle' })
-			.end();
+				.json({ code: 'invalid-request-vehicle' })
+				.end();
 			return;
 		}
 		const favorite = await favoriteModel.findOne({
@@ -27,8 +27,8 @@ export const createFavoriteController = async (req: Request, res: Response) => {
 		});
 		if (favorite) {
 			res.status(400)
-			.json({ code: 'favorite-already-exists' })
-			.end();
+				.json({ code: 'favorite-already-exists' })
+				.end();
 			return;
 		}
 		const datafavorite: FavoriteData = {
@@ -37,16 +37,16 @@ export const createFavoriteController = async (req: Request, res: Response) => {
 		}
 		const newFavorite = await favoriteModel.create(datafavorite);
 		res.status(200)
-		.json({
-			code: 'success-to-create',
-			newFavorite
-		})
-		.end();
+			.json({
+				code: 'success-to-create',
+				newFavorite
+			})
+			.end();
 		return;
 	} catch {
 		res.status(500)
-		.json({ code: 'unknow-error' })
-		.end();
+			.json({ code: 'unknow-error' })
+			.end();
 		return;
 	}
 }

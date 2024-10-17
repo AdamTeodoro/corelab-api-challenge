@@ -21,19 +21,19 @@ export const deleteFavoriteController = async (req: Request, res: Response) => {
 		});
 		if (!refFavorite) {
 			res.status(400)
-			.json({ code: 'invalid-favorite' })
-			.end();
+				.json({ code: 'invalid-favorite' })
+				.end();
 			return;
 		}
 		await refFavorite.destroy();
 		res.status(200)
-		.json({ code: 'success-to-delete' })
-		.end();
+			.json({ code: 'success-to-delete' })
+			.end();
 		return;
 	} catch {
 		res.status(500)
-		.json({ code: 'unknow-error' })
-		.end();
+			.json({ code: 'unknow-error' })
+			.end();
 		return;
 	}
 }

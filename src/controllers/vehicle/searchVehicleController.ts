@@ -19,7 +19,6 @@ type Request = {
 		}
 	}
 }
-
 export const searchVehicleController = async (req: Request, res: Response) => {
 	try {
 		const { query, queryForm } = req.body;
@@ -82,14 +81,13 @@ export const searchVehicleController = async (req: Request, res: Response) => {
 			arrayManager.copyArrayIfNotExists(vehiclesFindeds, findedByDescription)
 		}
 		res.status(200)
-		.json({ code: 'success-to-search-veicles',  vehiclesFindeds })
-		.end();
+			.json({ code: 'success-to-search-veicles',  vehiclesFindeds })
+			.end();
 		return;
 	} catch(error) {
-		console.log(error);
 		res.status(500)
-		.json({ code: 'unknow-error' })
-		.end();
+			.json({ code: 'unknow-error' })
+			.end();
 		return;
 	}
 }

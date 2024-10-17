@@ -18,16 +18,16 @@ export const createVehicleController = async (req: Request, res: Response) => {
 		vehicle.idSession = req.idSession as number;
 		const newVehicle = await vehicleModel.create(vehicle);
 		res.status(200)
-		.json({
-			code: 'success-to-create-vehicle',
-			newVehicle
-		})
-		.end();
+			.json({
+				code: 'success-to-create-vehicle',
+				newVehicle
+			})
+			.end();
 		return;
 	} catch  {
 		res.status(500)
-		.json({ code: 'unknow-error' })
-		.end();
+			.json({ code: 'unknow-error' })
+			.end();
 		return;
 	}
 }

@@ -30,14 +30,13 @@ export const deleteVehicleController = async (req: Request, res: Response) => {
 			}
 		});
 		res.status(200)
-		.json({ code: 'success-to-delete-vehicle' })
-		.end();
+			.json({ code: 'success-to-delete-vehicle' })
+			.end();
 		return;
 	} catch(error) {
-		console.log(error)
 		res.status(500)
-		.json({ code: 'unknow-error' })
-		.end();
+			.json({ code: 'unknow-error' })
+			.end();
 		return;
 	}
 }

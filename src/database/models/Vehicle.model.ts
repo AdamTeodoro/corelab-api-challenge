@@ -62,5 +62,4 @@ export type VehicleData = {
 	price: number;
 	description: string;
 }
-
 export const vehicleModel = build(db);
