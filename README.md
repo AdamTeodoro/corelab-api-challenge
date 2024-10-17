@@ -1,3 +1,6 @@
+##Install command
+<p>npm i --save</p>
+
 ## Corelab Challenge
 
 Welcome to the **Corelab Challenge**! Here you'll show us how awesome you are at coding.
@@ -73,3 +76,5 @@ Create a file PULL_REQUEST.md where you will describe what you did and how in as
 Create a new pull request using the same branch name for Backend and Frontend
 
 Send us the pull requests and that's all!
+
+
