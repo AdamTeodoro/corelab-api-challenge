@@ -1,6 +1,6 @@
 import { Sequelize, DataTypes, BuildOptions, Model } from "sequelize";
 
-import { IFavorite } from "../../interfaces/Favorite";
+import { IFavorite } from "../../interfaces/IFavorite";
 
 import { db } from "../database";
 
